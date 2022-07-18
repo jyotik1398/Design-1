@@ -1,4 +1,4 @@
-import { Button, TextField } from "@material-ui/core";
+import { Button } from "../../components/Button/Button";
 import { useTranslation } from "react-i18next";
 import { FooterJson } from "../../configs/json/footer";
 import styles from "./Footer.module.scss";
@@ -93,8 +93,8 @@ const Footer = () => {
           <div className={styles.media}>
             <div className={styles.mediaHeader}>{t(FooterJson?.media)}</div>
             <div className={styles.textbox}>
-                <input type="text" placeholder={t(FooterJson?.placeholder)}/>
-                <Icon icon="bi:arrow-right" color="purple" />s
+              <input type="text" placeholder={t(FooterJson?.placeholder)} />
+              <Icon icon="bi:arrow-right" color="purple" />s
             </div>
             <div className={styles.update}>{t(FooterJson?.updates)}</div>
           </div>
