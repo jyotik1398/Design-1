@@ -1,0 +1,96 @@
+.outerWrapper{
+    background-color: white;
+    border: 2px solid #d1d0fd;
+    border-radius: 20px;
+    .innerWrapper{
+        padding: 24px;
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .headerTextArea{
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                .headerText{
+                    font-family: 'Inter', sans-serif;
+                    font-weight: bold;
+                    line-height: 14px;
+                }
+                .headerDesc{
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 600;
+                    color: #b8b8b8;
+                    line-height: 30px;
+                }
+            }
+            .price{
+                .priceBody{
+                    font-family: 'Inter', sans-serif;
+                    font-weight: bold;
+                    font-size: 40px;
+                }
+            }
+        }
+        .separator{
+            height: 1px;
+            border-radius: 2px;
+            background-color: #d5d7de;
+            margin: 16px 0;
+        }
+        .body{
+            display: flex;
+    flex-direction: column;
+            .listItem{
+                display: flex;
+                flex-direction: column;
+                .cardContainer{
+                    display: flex;
+                    flex-direction: row;
+                    .icon{
+                       width:  calc(100% - 77%);
+                        & >:first-child{
+                            height: 30px;
+                        }
+                    }
+                    .value{
+                        font-family: 'Inter', sans-serif;
+                        font-weight: bold;
+                        font-size: 14px;
+                        align-self: center;
+                    }
+                    .disbaledValue{
+                        font-family: 'Inter', sans-serif;
+                        font-weight: bold;
+                        font-size: 14px;
+                        align-self: center;
+                        color: #b8b8b8;
+                    }
+                }
+            }
+            .btnWrapper{
+                padding-top: 24px;
+                  .getStartedButton {
+                    background: #7d7ae3;
+                    border: none;
+                    border-radius: 7px;
+                    color: #fff;
+                    font-size: 16px;
+                    min-height: 36px;
+                    padding: 0;
+                    width: 100px;
+                    .buttonText {
+                      text-transform: none;
+                      transition: none;
+                      font-size: 12px;
+                    }
+                  }
+              }
+        }
+    }
+}
+.outerWrapper:hover{
+    border: 2px solid #d1d0fd;
+    border-radius: 20px;
+    background-color: #e4e4fa;
+}

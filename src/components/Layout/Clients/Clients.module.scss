@@ -1,0 +1,52 @@
+.outerWrapper{
+    background-color: white;
+    padding-bottom: 32px;
+    .innerWrapper{
+        .subHeader{
+            padding-top: 24px;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+        }
+        .header{
+            padding-top: 24px;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+            font-size: 32px;
+        }
+        .news{
+            .subHeading{
+                padding-top: 24px;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+            }
+            .expt{
+                padding-top: 24px;
+                font-family: 'Inter', sans-serif;
+                font-weight: bold;
+                line-height: 20px;
+                text-align: center;
+                font-size: 32px; 
+            }
+        }
+        .cardContainer{
+            display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                column-gap: 24px;
+                padding-top: 50px;
+            .cardWrapper{
+                display: flex;
+                flex-direction: row;
+                width: 220px;
+                border: 2px solid #d1d0fd;
+                border-radius: 20px;
+            }
+        }
+    }
+}
