@@ -76,9 +76,9 @@ const Footer = () => {
                 return (
                   <div className={styles.postWrapper}>
                     <div className={styles.imgWrapper}>
-                      <img src={image} />
+                      <img src={image} alt="" />
                     </div>
-                    <div className={styles.content}>
+                    <div key={`post-${index}`} className={styles.content}>
                       <span className={styles.title}>{t(post?.title)}</span>
                       <span className={styles.date}>
                         <Icon icon="akar-icons:calendar" />

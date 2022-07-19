@@ -33,7 +33,7 @@ const MainPage = () => {
           </div>
         </div>
         <div className={styles.imgSection}>
-          <img src={ladyImg} />
+          <img src={ladyImg} alt="" />
         </div>
       </div>
       <div className={styles.block2}>
@@ -80,14 +80,14 @@ const MainPage = () => {
         </div>
         <div className={styles.imageSec}>
           <div className={styles.img1}>
-            <img src={img1} />
+            <img src={img1} alt="" />
           </div>
         </div>
       </div>
       <div className={styles.block4}>
         <div className={styles.img2}>
           <div className={styles.imgClass}>
-            <img src={img1} />
+            <img src={img1} alt="" />
           </div>
           <div className={styles.counter}>
             <div className={styles.innerCard}>

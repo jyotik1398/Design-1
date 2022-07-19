@@ -30,22 +30,23 @@
           font-weight: 600;
         }
       }
-      .img{
+      .img {
         align-self: center;
         padding-left: 16px;
         padding-right: 16px;
+        padding-top: 6px;
       }
       .btnWrapper {
         padding-left: 26px;
         .getStartedButton {
-            background: #7d7ae3;
-            border: none;
-            border-radius: 7px;
-            color: #fff;
-            font-size: 16px;
-            min-height: 36px;
-            padding: 0;
-            width: 90px;
+          background: #7d7ae3;
+          border: none;
+          border-radius: 7px;
+          color: #fff;
+          font-size: 16px;
+          min-height: 36px;
+          padding: 0;
+          width: 90px;
           .buttonText {
             text-transform: none;
             transition: none;

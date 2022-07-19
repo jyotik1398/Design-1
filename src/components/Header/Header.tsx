@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { header } from "../../configs/json/header";
 import styles from "./Header.module.scss";
-import searchIcon from "../../assets/icons/searchIcon.svg";
 import { Button } from "../Button/Button";
 import { Icon } from "@iconify/react";
 

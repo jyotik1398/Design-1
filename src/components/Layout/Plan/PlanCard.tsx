@@ -25,7 +25,10 @@ const PlanCard = (props: { data?: any }) => {
               return (
                 <div key={`lists-${index}`} className={styles.cardContainer}>
                   <span className={styles.icon}>
-                    <img src={t(lists?.icon) === "check" ? check : close} />
+                    <img
+                      src={t(lists?.icon) === "check" ? check : close}
+                      alt=""
+                    />
                   </span>
                   <span
                     className={
