@@ -6,10 +6,10 @@
   .innerWrapper {
     padding: 24px;
     .header {
-      @include flexStyleRow();
+      @include flexStyle(row);
       justify-content: space-between;
       .headerTextArea {
-        @include flexStyleColumn();
+        @include flexStyle(column);
         align-self: center;
         .headerText {
           @include labelStyle($primary-font, 14px, bold, null);
@@ -32,11 +32,11 @@
       margin: 16px 0;
     }
     .body {
-      @include flexStyleColumn();
+      @include flexStyle(column);
       .listItem {
-        @include flexStyleColumn();
+        @include flexStyle(column);
         .cardContainer {
-          @include flexStyleRow();
+          @include flexStyle(row);
           .icon {
             width: calc(100% - 77%);
             & > :first-child {

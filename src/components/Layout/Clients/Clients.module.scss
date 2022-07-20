@@ -30,12 +30,12 @@
       }
     }
     .cardContainer {
-      @include flexStyleRow();
+      @include flexStyle(row);
       justify-content: space-evenly;
       column-gap: 24px;
       padding-top: 50px;
       .cardWrapper {
-        @include flexStyleRow();
+        @include flexStyle(row);
         width: 220px;
         border: 2px solid $border-color;
         border-radius: 20px;

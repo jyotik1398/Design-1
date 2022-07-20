@@ -1,13 +1,13 @@
 @import "../../styles/design.theme.var.scss";
 .outerWrapper {
-  @include flexStyleColumn();
+  @include flexStyle(column);
   align-items: center;
   align-self: center;
   height: 56px;
   width: 100%;
   box-shadow: 0 6px 10px -5px $box-shadow-header;
   .innerWrapper {
-    @include flexStyleRow();
+    @include flexStyle(row);
     align-items: center;
     align-self: center;
     justify-content: space-between;
@@ -20,14 +20,14 @@
     .menu {
       font-family: $secondary-font;
       width: max-content;
-      @include flexStyleRow();
+      @include flexStyle(row);
       .menuOpt {
         padding-top: 6px;
-        @include flexStyleRow();
+        @include flexStyle(row);
         & > :first-child {
-          @include flexStyleRow();
+          @include flexStyle(row);
           & > :first-child {
-            @include flexStyleRow();
+            @include flexStyle(row);
             list-style: none;
             .option {
               padding: 6px;

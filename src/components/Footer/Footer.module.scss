@@ -6,10 +6,10 @@
   justify-content: center;
   .innerWrapper {
     width: 1200px;
-    @include flexStyleColumn();
+    @include flexStyle(column);
     padding-top: 24px;
     .header {
-      @include flexStyleRow();
+      @include flexStyle(row);
       justify-content: space-between;
       .headerText {
         @include labelStyle(
@@ -41,7 +41,7 @@
       border-bottom: 2px solid $border-white;
     }
     .body {
-      @include flexStyleRow();
+      @include flexStyle(row);
       @include labelStyle(
         $secondary-font,
         null,
@@ -51,7 +51,7 @@
       padding-top: 52px;
       column-gap: 30px;
       .contact {
-        @include flexStyleColumn();
+        @include flexStyle(column);
         width: 300px;
         .subTitle {
           @include labelStyle(
@@ -63,13 +63,13 @@
           padding-bottom: 24px;
         }
         .mail {
-          @include flexStyleRow();
+          @include flexStyle(row);
           @include labelStyle(null, 14px, 500, null);
           column-gap: 6px;
           padding-bottom: 4px;
         }
         .number {
-          @include flexStyleRow();
+          @include flexStyle(row);
           @include labelStyle(null, 14px, 500, null);
           column-gap: 6px;
           padding-bottom: 4px;
@@ -80,7 +80,7 @@
         }
       }
       .linksSection {
-        @include flexStyleColumn();
+        @include flexStyle(column);
         .extraLinks {
           @include labelStyle(
             $primary-font,
@@ -91,7 +91,7 @@
           padding-bottom: 24px;
         }
         .links {
-          @include flexStyleRow();
+          @include flexStyle(row);
           column-gap: 50px;
           .linkSection1 {
             .linkContainer {
@@ -103,7 +103,7 @@
         }
       }
       .posts {
-        @include flexStyleColumn();
+        @include flexStyle(column);
         width: 300px;
         .postHeading {
           @include labelStyle(
@@ -115,9 +115,9 @@
           padding-bottom: 24px;
         }
         .postContainer {
-          @include flexStyleColumn();
+          @include flexStyle(column);
           .postWrapper {
-            @include flexStyleRow();
+            @include flexStyle(row);
             column-gap: 24px;
             padding-bottom: 18px;
             .imgWrapper {
@@ -129,7 +129,7 @@
               }
             }
             .content {
-              @include flexStyleColumn();
+              @include flexStyle(column);
               .title {
                 font-size: 14px;
                 line-height: 24px;
@@ -137,7 +137,7 @@
               .date {
                 font-size: 14px;
                 line-height: 24px;
-                @include flexStyleRow();
+                @include flexStyle(row);
                 column-gap: 6px;
                 align-items: center;
                 & > :first-child {
@@ -149,7 +149,7 @@
         }
       }
       .media {
-        @include flexStyleColumn();
+        @include flexStyle(column);
         .mediaHeader {
           @include labelStyle(
             $primary-font,
@@ -165,7 +165,7 @@
           height: 38px;
           border: 1px solid transparent;
           border-radius: 20px;
-          @include flexStyleRow();
+          @include flexStyle(row);
           justify-content: space-between;
           & > :first-child {
             padding-left: 6px;

@@ -46,13 +46,9 @@ $secondary-font: "Roboto", "sans-serif";
   font-size: $size;
   font-weight: $weight;
 }
-@mixin flexStyleRow {
+@mixin flexStyle($direction) {
   display: flex;
-  flex-direction: row;
-}
-@mixin flexStyleColumn {
-  display: flex;
-  flex-direction: column;
+  flex-direction: $direction;
 }
 @mixin buttonStyle {
   background: $primary-button-background-color;

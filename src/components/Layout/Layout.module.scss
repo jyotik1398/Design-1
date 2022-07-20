@@ -1,6 +1,6 @@
 @import "../../styles/design.theme.var.scss";
 .wrapper {
-  @include flexStyleColumn();
+  @include flexStyle(column);
   justify-content: center;
   width: 100%;
   .innerWrapper {
