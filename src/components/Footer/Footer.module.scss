@@ -1,38 +1,35 @@
+@import "../../styles/design.theme.var.scss";
 .wrapper {
-  background: #7d7ae3;
+  background: $background-color-secondary;
   width: 100%;
   display: flex;
   justify-content: center;
   .innerWrapper {
     width: 1200px;
-    display: flex;
-    flex-direction: column;
+    @include flexStyleColumn();
     padding-top: 24px;
     .header {
-      display: flex;
-      flex-direction: row;
+      @include flexStyleRow();
       justify-content: space-between;
       .headerText {
-        font-family: "Inter", sans-serif;
-        font-weight: 500;
-        font-size: 28px;
-        color: white;
+        @include labelStyle(
+          $primary-font,
+          28px,
+          500,
+          $secondary-text-color-white
+        );
       }
       .btnWrapper {
         & > :first-child {
-          background: white;
+          background: $primary-background-color;
           border: none;
           border-radius: 7px;
-          font-weight: bold;
-          color: #716cf3;
-          font-size: 16px;
+          @include labelStyle(null, 16px, bold, $text-color-purple);
           min-height: 36px;
           padding: 0;
           width: 90px;
           .buttonText {
-            text-transform: none;
-            transition: none;
-            font-size: 12px;
+            @include buttonTextStyle();
           }
         }
       }
@@ -41,62 +38,60 @@
       height: 1px;
       border-radius: 2px;
       margin: 16px 0;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid $border-white;
     }
     .body {
-      display: flex;
-      flex-direction: row;
-      color: white;
+      @include flexStyleRow();
+      @include labelStyle(
+        $secondary-font,
+        null,
+        500,
+        $secondary-text-color-white
+      );
       padding-top: 52px;
-      font-family: "Roboto", sans-serif;
-      font-weight: 500;
       column-gap: 30px;
       .contact {
-        display: flex;
-        flex-direction: column;
+        @include flexStyleColumn();
         width: 300px;
         .subTitle {
-          font-family: "Inter", sans-serif;
-          font-weight: bold;
-          font-size: 28px;
-          color: white;
+          @include labelStyle(
+            $primary-font,
+            28px,
+            bold,
+            $secondary-text-color-white
+          );
           padding-bottom: 24px;
         }
         .mail {
-          display: flex;
-          flex-direction: row;
+          @include flexStyleRow();
+          @include labelStyle(null, 14px, 500, null);
           column-gap: 6px;
-          font-weight: 500px;
           padding-bottom: 4px;
-          font-size: 14px;
         }
         .number {
-          display: flex;
-          flex-direction: row;
+          @include flexStyleRow();
+          @include labelStyle(null, 14px, 500, null);
           column-gap: 6px;
-          font-weight: 500px;
           padding-bottom: 4px;
-          font-size: 14px;
         }
         .address {
+          @include labelStyle(null, 14px, 500, null);
           padding-top: 10px;
-          font-weight: 500px;
-          font-size: 14px;
         }
       }
       .linksSection {
-        display: flex;
-        flex-direction: column;
+        @include flexStyleColumn();
         .extraLinks {
-          font-family: "Inter", sans-serif;
-          font-weight: 500;
-          font-size: 16px;
-          color: white;
+          @include labelStyle(
+            $primary-font,
+            16px,
+            500,
+            $secondary-text-color-white
+          );
           padding-bottom: 24px;
         }
         .links {
-          display: flex;
-          flex-direction: row;
+          @include flexStyleRow();
           column-gap: 50px;
           .linkSection1 {
             .linkContainer {
@@ -108,22 +103,21 @@
         }
       }
       .posts {
-        display: flex;
-        flex-direction: column;
+        @include flexStyleColumn();
         width: 300px;
         .postHeading {
-          font-family: "Inter", sans-serif;
-          font-weight: 500;
-          font-size: 16px;
-          color: white;
+          @include labelStyle(
+            $primary-font,
+            16px,
+            500,
+            $secondary-text-color-white
+          );
           padding-bottom: 24px;
         }
         .postContainer {
-          display: flex;
-          flex-direction: column;
+          @include flexStyleColumn();
           .postWrapper {
-            display: flex;
-            flex-direction: row;
+            @include flexStyleRow();
             column-gap: 24px;
             padding-bottom: 18px;
             .imgWrapper {
@@ -135,8 +129,7 @@
               }
             }
             .content {
-              display: flex;
-              flex-direction: column;
+              @include flexStyleColumn();
               .title {
                 font-size: 14px;
                 line-height: 24px;
@@ -144,8 +137,7 @@
               .date {
                 font-size: 14px;
                 line-height: 24px;
-                display: flex;
-                flex-direction: row;
+                @include flexStyleRow();
                 column-gap: 6px;
                 align-items: center;
                 & > :first-child {
@@ -157,23 +149,23 @@
         }
       }
       .media {
-        display: flex;
-        flex-direction: column;
+        @include flexStyleColumn();
         .mediaHeader {
-          font-family: "Inter", sans-serif;
-          font-weight: 500;
-          font-size: 16px;
-          color: white;
+          @include labelStyle(
+            $primary-font,
+            16px,
+            500,
+            $secondary-text-color-white
+          );
           padding-bottom: 24px;
         }
         .textbox {
-          background-color: white;
+          background-color: $primary-background-color;
           width: 280px;
           height: 38px;
           border: 1px solid transparent;
           border-radius: 20px;
-          display: flex;
-          flex-direction: row;
+          @include flexStyleRow();
           justify-content: space-between;
           & > :first-child {
             padding-left: 6px;
@@ -194,8 +186,7 @@
         }
         .update {
           padding-top: 24px;
-          font-size: 14px;
-          font-weight: 500;
+          @include labelStyle(null, 14px, 500, null);
         }
       }
     }

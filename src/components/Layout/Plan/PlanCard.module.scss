@@ -1,96 +1,71 @@
-.outerWrapper{
-    background-color: white;
-    border: 2px solid #d1d0fd;
-    border-radius: 20px;
-    .innerWrapper{
-        padding: 24px;
-        .header{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            .headerTextArea{
-                display: flex;
-                flex-direction: column;
-                align-self: center;
-                .headerText{
-                    font-family: 'Inter', sans-serif;
-                    font-weight: bold;
-                    line-height: 14px;
-                }
-                .headerDesc{
-                    font-family: 'Roboto', sans-serif;
-                    font-weight: 600;
-                    color: #b8b8b8;
-                    line-height: 30px;
-                }
-            }
-            .price{
-                .priceBody{
-                    font-family: 'Inter', sans-serif;
-                    font-weight: bold;
-                    font-size: 40px;
-                }
-            }
+@import "../../../styles/design.theme.var.scss";
+.outerWrapper {
+  background-color: $primary-background-color;
+  border: 2px solid $border-color;
+  border-radius: 20px;
+  .innerWrapper {
+    padding: 24px;
+    .header {
+      @include flexStyleRow();
+      justify-content: space-between;
+      .headerTextArea {
+        @include flexStyleColumn();
+        align-self: center;
+        .headerText {
+          @include labelStyle($primary-font, 14px, bold, null);
         }
-        .separator{
-            height: 1px;
-            border-radius: 2px;
-            background-color: #d5d7de;
-            margin: 16px 0;
+        .headerDesc {
+          @include labelStyle($secondary-font, null, 600, $text-color-grey);
+          line-height: 30px;
         }
-        .body{
-            display: flex;
-    flex-direction: column;
-            .listItem{
-                display: flex;
-                flex-direction: column;
-                .cardContainer{
-                    display: flex;
-                    flex-direction: row;
-                    .icon{
-                       width:  calc(100% - 77%);
-                        & >:first-child{
-                            height: 30px;
-                        }
-                    }
-                    .value{
-                        font-family: 'Inter', sans-serif;
-                        font-weight: bold;
-                        font-size: 14px;
-                        align-self: center;
-                    }
-                    .disbaledValue{
-                        font-family: 'Inter', sans-serif;
-                        font-weight: bold;
-                        font-size: 14px;
-                        align-self: center;
-                        color: #b8b8b8;
-                    }
-                }
-            }
-            .btnWrapper{
-                padding-top: 24px;
-                  .getStartedButton {
-                    background: #7d7ae3;
-                    border: none;
-                    border-radius: 7px;
-                    color: #fff;
-                    font-size: 16px;
-                    min-height: 36px;
-                    padding: 0;
-                    width: 100px;
-                    .buttonText {
-                      text-transform: none;
-                      transition: none;
-                      font-size: 12px;
-                    }
-                  }
-              }
+      }
+      .price {
+        .priceBody {
+          @include labelStyle($primary-font, 40px, bold, null);
         }
+      }
     }
+    .separator {
+      height: 1px;
+      border-radius: 2px;
+      background-color: $backgroud-color-grey;
+      margin: 16px 0;
+    }
+    .body {
+      @include flexStyleColumn();
+      .listItem {
+        @include flexStyleColumn();
+        .cardContainer {
+          @include flexStyleRow();
+          .icon {
+            width: calc(100% - 77%);
+            & > :first-child {
+              height: 30px;
+            }
+          }
+          .value {
+            @include labelStyle($primary-font, 14px, bold, null);
+            align-self: center;
+          }
+          .disbaledValue {
+            @include labelStyle($primary-font, 14px, bold, $text-color-grey);
+            align-self: center;
+          }
+        }
+      }
+      .btnWrapper {
+        padding-top: 24px;
+        .getStartedButton {
+          .buttonText {
+            @include buttonTextStyle();
+          }
+        }
+      }
+    }
+  }
 }
-.outerWrapper:hover{
-    border: 2px solid #d1d0fd;
-    border-radius: 20px;
-    background-color: #e4e4fa;
+.outerWrapper:hover {
+  border: 2px solid $border-color-hover;
+  border-radius: 20px;
+  background-color: $backgrund-color-card-hover;
 }

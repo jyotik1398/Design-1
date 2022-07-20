@@ -1,0 +1,76 @@
+$primary-background-color: #ffffff;
+$backgrund-color-card-hover: #e4e4fa;
+$backgroud-color-grey: #d5d7de;
+$background-color-secondary: #7d7ae3;
+$primary-button-background-color: #7d7ae3;
+$background-color-light-grey: #f7f7f9;
+$box-shadow-header: #bdbbbb;
+$text-color-purple: #716cf3;
+$secondary-text-color-white: #ffffff;
+$tertiary-text-color-black: #000000;
+$text-color-grey: #b8b8b8;
+$text-color-dark-gray: #a8a7a7;
+$text-color-hover: #7d7ae3;
+
+$primary-button-color-dark: #ffffff;
+$secondary-button-color-white: #716cf3;
+
+$border-color-hover: #d1d0fd;
+$border-color: #d1d0fd;
+$border-color-secondary: #8f8d8d;
+$border-white: white;
+
+$primary-font: "Inter", "sans-serif";
+$secondary-font: "Roboto", "sans-serif";
+
+@mixin subHeadingStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  width: 500px;
+  padding: 6px 0;
+}
+
+@mixin labelStyle($font, $size, $weight, $color) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+@mixin descStyle($size, $weight) {
+  font-family: $secondary-font;
+  font-weight: 600;
+  color: $text-color-grey;
+  line-height: 24px;
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin flexStyleRow {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flexStyleColumn {
+  display: flex;
+  flex-direction: column;
+}
+@mixin buttonStyle {
+  background: $primary-button-background-color;
+  border: none;
+  border-radius: 7px;
+  color: $primary-button-color-dark;
+  font-size: 16px;
+  min-height: 36px;
+  padding: 0;
+  width: 120px;
+  cursor: pointer;
+}
+@mixin buttonTextStyle {
+  text-transform: none;
+  transition: none;
+  font-size: 12px;
+}
+@mixin roundedTopBorderStyle {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}

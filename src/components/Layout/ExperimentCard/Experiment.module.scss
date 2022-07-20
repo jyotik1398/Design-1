@@ -1,37 +1,31 @@
-.outerWrapper{
-    .imgContainer{
-        height: 100px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        &>:first-child{
-            height: 100px;
-            width: 220px;
-            border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        }
+@import "../../../styles/design.theme.var.scss";
+.outerWrapper {
+  .imgContainer {
+    height: 100px;
+    @include roundedTopBorderStyle();
+    & > :first-child {
+      height: 100px;
+      width: 220px;
+      @include roundedTopBorderStyle();
     }
-    .title{
-        font-family: "Inter", sans-serif;
-        font-weight: bold;
-        font-size: 22px;
-        padding: 12px;
-        line-height: 24px;
-        text-align: center;
-    }
-    .desc{
-        font-family: "Inter", sans-serif;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 20px;
-        color: #b8b8b8;
-        padding: 12px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
+  }
+  .title {
+    @include labelStyle($primary-font, 22px, bold, null);
+    padding: 12px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .desc {
+    @include labelStyle($primary-font, 12px, bold, $text-color-grey);
+    line-height: 20px;
+    padding: 12px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
-.outerWrapper:hover{
-    background-color: #e4e4fa;
-    cursor: pointer;
-    border: 1px solid #d1d0fd;
-    border-radius: 20px;
+.outerWrapper:hover {
+  background-color: $backgrund-color-card-hover;
+  cursor: pointer;
+  border: 1px solid $border-color-hover;
+  border-radius: 20px;
 }

@@ -1,33 +1,29 @@
-.wrapper{
-    display: flex;
-    align-items: center;
-    .innerWrapper{
-        padding: 24px;
-        .imgWrapper{
-            display: flex;
-            justify-content: center;
-            padding-bottom: 32px;
-            &>:first-child{
-                width: 60px;
-                height:60px;
-                border: 1px solid #8f8d8d;
-                border-radius: 50px;
-            }
-        }
-        .title{
-            font-family: 'Inter', sans-serif;
-            font-weight: bold;
-            font-size: 16px;
-            text-align: center;
-        }
-        .description{
-            font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    text-align: center;
-    color: #b8b8b8;
-    font-weight: bold;
-    line-height: 1.5;
-    padding-top: 24px;
-        }
+@import "../../styles/design.theme.var.scss";
+.wrapper {
+  display: flex;
+  align-items: center;
+  .innerWrapper {
+    padding: 24px;
+    .imgWrapper {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 32px;
+      & > :first-child {
+        width: 60px;
+        height: 60px;
+        border: 1px solid $border-color-secondary;
+        border-radius: 50px;
+      }
     }
+    .title {
+      @include labelStyle($primary-font, 16px, bold, null);
+      text-align: center;
+    }
+    .description {
+      @include labelStyle($secondary-font, 14px, bold, $text-color-grey);
+      text-align: center;
+      line-height: 1.5;
+      padding-top: 24px;
+    }
+  }
 }

@@ -1,38 +1,24 @@
+@import "../../../styles/design.theme.var.scss";
 .wrapper {
   .block1 {
-    display: flex;
+    @include flexStyleRow();
     .text {
       width: 600px;
-      display: flex;
-      flex-direction: column;
+      @include flexStyleColumn();
       align-self: center;
       .label {
-        font-family: "Inter", sans-serif;
-        font-size: 42px;
-        font-weight: bold;
+        @include labelStyle($primary-font, 42px, bold, null);
       }
       .desc {
+        @include labelStyle($secondary-font, null, 600, $text-color-dark-gray);
         padding-top: 24px;
-        font-family: "Roboto", sans-serif;
         width: calc(100% - 30%);
-        font-weight: 600;
-        color: #a8a7a7;
       }
       .btnWrapper {
         padding-top: 24px;
         .getStartedButton {
-          background: #7d7ae3;
-          border: none;
-          border-radius: 7px;
-          color: #fff;
-          font-size: 16px;
-          min-height: 36px;
-          padding: 0;
-          width: 90px;
           .buttonText {
-            text-transform: none;
-            transition: none;
-            font-size: 12px;
+            @include buttonTextStyle();
           }
         }
       }
@@ -48,206 +34,143 @@
     }
   }
   .block2 {
-    display: flex;
-    flex-direction: column;
+    @include flexStyleColumn();
     align-items: center;
     .services {
-      font-family: "Inter", sans-serif;
-      font-size: 14px;
-      font-weight: bolder;
+      @include labelStyle($primary-font, 14px, bolder, null);
       padding-bottom: 20px;
     }
     .desc1 {
-      font-family: "Inter", sans-serif;
-      font-size: 26px;
+      @include labelStyle($primary-font, 26px, bolder, null);
       width: 500px;
-      font-weight: bolder;
       text-align: center;
       line-height: 36px;
     }
     .cardsWrapper {
-      display: flex;
-      flex-direction: row;
+      @include flexStyleRow();
       padding-top: 60px;
       width: 100%;
       justify-content: space-between;
-      .cardContainer{
+      .cardContainer {
         width: 320px;
         height: 340px;
-    display: flex;
-    justify-content: center;
-    border: 3px solid transparent;
-    border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        border: 3px solid transparent;
+        border-radius: 20px;
       }
-      .cardContainer:hover{
-        background-color: #e4e4fa;
-        border: 3px solid #d1d0fd;
-    border-radius: 20px;
-    cursor: pointer;
-    // transition: all .2s ease-in;
+      .cardContainer:hover {
+        background-color: $backgrund-color-card-hover;
+        border: 3px solid $border-color-hover;
+        border-radius: 20px;
+        cursor: pointer;
       }
     }
   }
-  .block3{
+  .block3 {
     padding-top: 24px;
-    display: flex;
-    flex-direction: row;
+    @include flexStyleRow();
     width: 100%;
-    .companyData{
+    .companyData {
       width: calc(100% - 50%);
-    .subHeading{
-        font-family: 'Inter',sans-serif;
-        font-weight: bold;
+      .subHeading {
+        @include labelStyle($primary-font, 14px, bold, null);
         line-height: 30px;
-        font-size: 14px;
-    }
-    .subHeading2{
-      font-family: 'Inter',sans-serif;
-      font-weight: bold;
-      font-size: 28px;
-      line-height: 36px;
-      width: 500px;
-      padding: 6px 0;
-    }
-    .comDesc{
-      font-family: 'Roboto', sans-serif;
-      font-weight: 600;
-      color: #b8b8b8;
-      line-height: 24px;
-      width: 500px;
-    }
-    .btnWrapper{
-      padding-top: 24px;
+      }
+      .subHeading2 {
+        @include subHeadingStyle();
+      }
+      .comDesc {
+        @include descStyle(null, null);
+        width: 500px;
+      }
+      .btnWrapper {
+        padding-top: 24px;
         .getStartedButton {
-          background: #7d7ae3;
-          border: none;
-          border-radius: 7px;
-          color: #fff;
-          font-size: 16px;
-          min-height: 36px;
-          padding: 0;
-          width: 100px;
           .buttonText {
-            text-transform: none;
-            transition: none;
-            font-size: 12px;
+            @include buttonTextStyle();
           }
         }
+      }
     }
-    }
-    .imageSec{
+    .imageSec {
       display: flex;
       justify-content: center;
-   
-      .img1{
-        &>:first-child{
+
+      .img1 {
+        & > :first-child {
           height: 300px;
           margin-left: 60px;
         }
-      
-    }
-   
+      }
     }
   }
-  .block4{
-    display: flex;
-    flex-direction: row;
+  .block4 {
+    @include flexStyleRow();
     padding-top: 24px;
-    .img2{
+    .img2 {
       display: flex;
-    position: relative;
-    .imgClass{
-      &>:first-child{
-        height: 300px;
-        width: 700px;
-        margin-left: -74px;
-        margin-top: -20px;
+      position: relative;
+      .imgClass {
+        & > :first-child {
+          height: 300px;
+          width: 700px;
+          margin-left: -74px;
+          margin-top: -20px;
+        }
+      }
+      .counter {
+        position: absolute;
+        height: 200px;
+        background: $primary-background-color;
+        width: 90px;
+        border: 2px solid $border-color-hover;
+        border-radius: 20px;
+        right: 26px;
+        bottom: 0;
+        .innerCard {
+          @include flexStyleColumn();
+          padding: 14px;
+          align-self: center;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          .count {
+            @include labelStyle($primary-font, 32px, bold, null);
+          }
+          .countDesc {
+            @include descStyle(14px, 600);
+            text-align: center;
+          }
+          .acc {
+            @include labelStyle($primary-font, 32px, bold, null);
+          }
+          .accDesc {
+            @include descStyle(14px, 600);
+            text-align: center;
+          }
+        }
       }
     }
-    .counter{
-      position: absolute;
-    height: 200px;
-    background: white;
-    width: 90px;
-    border: 2px solid #d1d0fd;
-    border-radius: 20px;
-    right: 26px;
-    bottom: 0;
-      .innerCard{
-        display: flex;
-    padding: 14px;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    .count{
-      font-family: 'Inter', sans-serif;
-      font-size: 32px;
-      font-weight: bold;
-    }.countDesc{
-      font-family: 'Roboto', sans-serif;
-      font-weight: 600;
-      color: #b8b8b8;
-      line-height: 24px;
-      font-size: 14px;
-      text-align: center;
-    }
-    .acc{
-      font-family: 'Inter', sans-serif;
-      font-size: 32px;
-      font-weight: bold;
-    }
-    .accDesc{
-      font-family: 'Roboto', sans-serif;
-      font-weight: 600;
-      color: #b8b8b8;
-      line-height: 24px;
-      font-size: 14px;
-      text-align: center;
-    }
-      }
-    }
-    }
-    .data{
-      .subHeadingBussiness{
-        font-family: 'Inter',sans-serif;
-        font-weight: bold;
+    .data {
+      .subHeadingBussiness {
+        @include labelStyle($primary-font, 14px, bold, null);
         line-height: 30px;
-        font-size: 14px;
       }
-      .headingBussiness{
-      font-family: 'Inter',sans-serif;
-      font-weight: bold;
-      font-size: 28px;
-      line-height: 36px;
-      width: 500px;
-      padding: 6px 0;
+      .headingBussiness {
+        @include subHeadingStyle();
       }
-      .bussinessDesc{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 600;
-        color: #b8b8b8;
-        line-height: 24px;
+      .bussinessDesc {
+        @include descStyle(null, null);
         width: 500px;
       }
-      .btnWrapper{
+      .btnWrapper {
         padding-top: 24px;
-          .getStartedButton {
-            background: #7d7ae3;
-            border: none;
-            border-radius: 7px;
-            color: #fff;
-            font-size: 16px;
-            min-height: 36px;
-            padding: 0;
-            width: 100px;
-            .buttonText {
-              text-transform: none;
-              transition: none;
-              font-size: 12px;
-            }
+        .getStartedButton {
+          .buttonText {
+            @include buttonTextStyle();
           }
+        }
       }
     }
   }

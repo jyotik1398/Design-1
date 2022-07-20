@@ -1,19 +1,18 @@
-import styles from './App.module.scss';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import Layout from './components/Layout/Layout';
-
+import Layout from "./components/Layout/Layout";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
-
   return (
-    <div className={styles.wrapper}>
-      <Header/>
-      <div className={styles.innerWrapper}>
-      <Layout/>
-      </div>
-      <Footer/>
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}></Route>
+        <Route path="/home" element={<Layout />}></Route>
+        <Route path="/portfolio" element={<Layout />}></Route>
+        <Route path="/pages" element={<Layout />}></Route>
+        <Route path="/blog" element={<Layout />}></Route>
+        <Route path="/shop" element={<Layout />}></Route>
+        <Route path="/support" element={<Layout />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

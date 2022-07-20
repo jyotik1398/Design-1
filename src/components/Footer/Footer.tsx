@@ -74,7 +74,7 @@ const Footer = () => {
             <div className={styles.postContainer}>
               {FooterJson?.posts.map((post, index) => {
                 return (
-                  <div className={styles.postWrapper}>
+                  <div key={`post-${index}`} className={styles.postWrapper}>
                     <div className={styles.imgWrapper}>
                       <img src={image} alt="" />
                     </div>

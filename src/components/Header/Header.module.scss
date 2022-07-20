@@ -1,56 +1,61 @@
+@import "../../styles/design.theme.var.scss";
 .outerWrapper {
-  display: flex;
+  @include flexStyleColumn();
   align-items: center;
   align-self: center;
   height: 56px;
   width: 100%;
-  box-shadow: 0 6px 10px -5px #bdbbbb;
+  box-shadow: 0 6px 10px -5px $box-shadow-header;
   .innerWrapper {
-    display: flex;
-    flex-direction: row;
+    @include flexStyleRow();
+    align-items: center;
+    align-self: center;
     justify-content: space-between;
     width: 1200px;
-    align-self: center;
-    align-items: center;
     margin: auto;
+    height: 56px;
     .title {
-      font-family: "Inter", sans-serif;
-      font-weight: bold;
+      @include labelStyle($primary-font, null, bold, null);
     }
     .menu {
-      font-family: "Roboto", sans-serif;
+      font-family: $secondary-font;
       width: max-content;
-      display: flex;
-      flex-direction: row;
+      @include flexStyleRow();
       .menuOpt {
         padding-top: 6px;
-        .option {
-          padding: 6px;
-          font-size: 12px;
-          font-weight: 600;
+        @include flexStyleRow();
+        & > :first-child {
+          @include flexStyleRow();
+          & > :first-child {
+            @include flexStyleRow();
+            list-style: none;
+            .option {
+              padding: 6px;
+              @include labelStyle(null, 12px, 600, null);
+              cursor: pointer;
+              & > :first-child {
+                color: $tertiary-text-color-black;
+              }
+              & > :first-child:hover {
+                color: $text-color-hover;
+              }
+            }
+          }
         }
       }
       .img {
         align-self: center;
         padding-left: 16px;
         padding-right: 16px;
-        padding-top: 6px;
+        padding-top: 4px;
+        cursor: pointer;
       }
       .btnWrapper {
         padding-left: 26px;
+        align-self: center;
         .getStartedButton {
-          background: #7d7ae3;
-          border: none;
-          border-radius: 7px;
-          color: #fff;
-          font-size: 16px;
-          min-height: 36px;
-          padding: 0;
-          width: 90px;
           .buttonText {
-            text-transform: none;
-            transition: none;
-            font-size: 12px;
+            @include buttonTextStyle();
           }
         }
       }

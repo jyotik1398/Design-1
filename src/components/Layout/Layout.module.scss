@@ -1,3 +1,11 @@
-.wrapper{
+@import "../../styles/design.theme.var.scss";
+.wrapper {
+  @include flexStyleColumn();
+  justify-content: center;
+  width: 100%;
+  .innerWrapper {
     padding-top: 60px;
+    width: 1200px;
+    align-self: center;
+  }
 }

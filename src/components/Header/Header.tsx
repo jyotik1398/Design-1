@@ -3,6 +3,7 @@ import { header } from "../../configs/json/header";
 import styles from "./Header.module.scss";
 import { Button } from "../Button/Button";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -14,12 +15,17 @@ const Header = () => {
         </div>
         <div className={styles.menu}>
           <div className={styles.menuOpt}>
-            <span className={styles.option}>{t(header?.menu1)}</span>
-            <span className={styles.option}>{t(header?.menu2)}</span>
-            <span className={styles.option}>{t(header?.menu3)}</span>
-            <span className={styles.option}>{t(header?.menu4)}</span>
-            <span className={styles.option}>{t(header?.menu5)}</span>
-            <span className={styles.option}>{t(header?.menu6)}</span>
+            <nav>
+              <ul>
+                {header?.menuList.map((menus, index) => {
+                  return (
+                    <li key={`menus-${index}`} className={styles.option}>
+                      <Link to={menus?.link}>{t(menus?.menu)}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
           </div>
           <div className={styles.img}>
             <Icon icon="akar-icons:search" />

@@ -1,52 +1,45 @@
-.outerWrapper{
-    background-color: white;
-    padding-bottom: 32px;
-    .innerWrapper{
-        .subHeader{
-            padding-top: 24px;
-            font-family: 'Inter', sans-serif;
-            font-weight: bold;
-            line-height: 20px;
-            text-align: center;
-        }
-        .header{
-            padding-top: 24px;
-            font-family: 'Inter', sans-serif;
-            font-weight: bold;
-            line-height: 20px;
-            text-align: center;
-            font-size: 32px;
-        }
-        .news{
-            .subHeading{
-                padding-top: 24px;
-            font-family: 'Inter', sans-serif;
-            font-weight: bold;
-            line-height: 20px;
-            text-align: center;
-            }
-            .expt{
-                padding-top: 24px;
-                font-family: 'Inter', sans-serif;
-                font-weight: bold;
-                line-height: 20px;
-                text-align: center;
-                font-size: 32px; 
-            }
-        }
-        .cardContainer{
-            display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                column-gap: 24px;
-                padding-top: 50px;
-            .cardWrapper{
-                display: flex;
-                flex-direction: row;
-                width: 220px;
-                border: 2px solid #d1d0fd;
-                border-radius: 20px;
-            }
-        }
+@import "../../../styles/design.theme.var.scss";
+.outerWrapper {
+  background-color: $primary-background-color;
+  padding-bottom: 32px;
+  .innerWrapper {
+    .subHeader {
+      @include labelStyle($primary-font, null, bold, null);
+      padding-top: 24px;
+      line-height: 20px;
+      text-align: center;
     }
+    .header {
+      @include labelStyle($primary-font, 32px, bold, null);
+      padding-top: 24px;
+      line-height: 20px;
+      text-align: center;
+    }
+    .news {
+      .subHeading {
+        @include labelStyle($primary-font, null, bold, null);
+        padding-top: 24px;
+        line-height: 20px;
+        text-align: center;
+      }
+      .expt {
+        @include labelStyle($primary-font, 32px, bold, null);
+        padding-top: 24px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+    .cardContainer {
+      @include flexStyleRow();
+      justify-content: space-evenly;
+      column-gap: 24px;
+      padding-top: 50px;
+      .cardWrapper {
+        @include flexStyleRow();
+        width: 220px;
+        border: 2px solid $border-color;
+        border-radius: 20px;
+      }
+    }
+  }
 }

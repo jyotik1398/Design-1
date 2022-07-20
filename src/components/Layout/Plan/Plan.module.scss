@@ -1,5 +1,6 @@
+@import "../../../styles/design.theme.var.scss";
 .outerWrapper {
-  background-color: #f7f7f9;
+  background-color: $background-color-light-grey;
   height: 600px;
   .innerWrapper {
     .subText {
@@ -7,16 +8,12 @@
       padding-bottom: 6px;
       padding-top: 10px;
       .text {
-        font-family: "Inter", sans-serif;
-        font-weight: bold;
-        font-size: 14px;
+        @include labelStyle($primary-font, 14px, bold, null);
         line-height: 20px;
       }
     }
     .heading {
-      font-family: "Inter", sans-serif;
-      font-weight: bold;
-      font-size: 22px;
+      @include labelStyle($primary-font, 22px, bold, null);
       text-align: center;
       line-height: 20px;
       padding-bottom: 4px;
