@@ -1,0 +1,25 @@
+@mixin for-phone-only {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin for-ipad-landscape {
+  @media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin for-ipad-portrait {
+  @media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    @content;
+  }
+}
+@mixin for-ipadPro-landscape {
+  @media (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin for-ipadPro-portrait {
+  @media (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+    @content;
+  }
+}

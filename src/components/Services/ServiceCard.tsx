@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./ServiceCard.module.scss";
 import icon from "../../assets/icons/rocket.png";
 import { Button } from "../Button/Button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 const ServiceCard = (props: { data?: any }) => {
   const { data } = props;
   const [isHovering, setIsHovering] = useState(false);
