@@ -1,4 +1,5 @@
 @import "../../styles/design.theme.var.scss";
+@import "../../globalMedia.scss";
 .wrapper {
   background: $background-color-secondary;
   width: 100%;
@@ -176,7 +177,7 @@
           }
           & > :last-child {
             align-self: center;
-            margin-right: -30px;
+            margin-right: 16px;
             cursor: pointer;
           }
           & > :last-child:hover,
@@ -193,6 +194,48 @@
         .update {
           padding-top: 24px;
           @include labelStyle(null, 14px, 500, null);
+        }
+      }
+    }
+  }
+}
+@include for-ipad-landscape {
+  .wrapper {
+    padding-bottom: 12px;
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
+  }
+}
+@include for-ipad-portrait {
+  .wrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+      .body {
+        column-gap: 12px;
+        .links {
+          column-gap: 12px;
+        }
+        .posts {
+          .postContainer {
+            .postWrapper {
+              column-gap: 12px;
+              .content {
+                .date {
+                  column-gap: 4px;
+                  & > :first-child {
+                    align-self: flex-start;
+                    padding-top: 6px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .media {
+          .textbox {
+            width: auto;
+          }
         }
       }
     }

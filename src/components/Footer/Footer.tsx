@@ -94,7 +94,7 @@ const Footer = () => {
             <div className={styles.mediaHeader}>{t(FooterJson?.media)}</div>
             <div className={styles.textbox}>
               <input type="text" placeholder={t(FooterJson?.placeholder)} />
-              <Icon icon="bi:arrow-right" color="purple" />s
+              <Icon icon="bi:arrow-right" color="purple" />
             </div>
             <div className={styles.update}>{t(FooterJson?.updates)}</div>
           </div>

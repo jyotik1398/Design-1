@@ -1,4 +1,5 @@
 @import "../../../styles/design.theme.var.scss";
+@import "../../../globalMedia.scss";
 .slider {
   position: relative;
   height: 100vh;
@@ -44,4 +45,22 @@
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+}
+@include for-ipad-portrait {
+  .slider {
+    height: 62vh;
+  }
+  .left-arrow {
+    left: 0;
+  }
+  .right-arrow {
+    right: 0;
+  }
+  .slide.active {
+    & > :first-child {
+      width: calc(100% - 30%);
+      margin: auto;
+      display: flex;
+    }
+  }
 }

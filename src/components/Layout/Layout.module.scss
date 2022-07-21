@@ -1,5 +1,7 @@
 @import "../../styles/design.theme.var.scss";
+@import "../../globalMedia.scss";
 .wrapper {
+  overflow-x: hidden;
   @include flexStyle(column);
   justify-content: center;
   width: 100%;
@@ -7,5 +9,41 @@
     padding-top: 60px;
     width: 1200px;
     align-self: center;
+  }
+}
+
+@include for-phone-only {
+  .wrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
+  }
+}
+@include for-ipad-portrait {
+  .wrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
+  }
+}
+@include for-ipad-landscape {
+  .wrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
+  }
+}
+@include for-ipadPro-portrait {
+  .wrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
+  }
+}
+@include for-ipadPro-landscape {
+  .wrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
   }
 }

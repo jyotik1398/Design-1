@@ -1,4 +1,5 @@
 @import "../../../styles/design.theme.var.scss";
+@import "../../../globalMedia.scss";
 .outerWrapper {
   background-color: $primary-background-color;
   border: 2px solid $border-color;
@@ -70,4 +71,33 @@
   background-color: $backgrund-color-card-hover;
   box-shadow: -1px 2px 18px #b9b8b8;
   transform: scale(1.1);
+}
+@include for-ipad-portrait {
+  .outerWrapper {
+    width: 216px;
+    .innerWrapper {
+      padding: 12px;
+      .header {
+        .price {
+          .priceBody {
+            font-size: 32px;
+          }
+        }
+      }
+      .body {
+        .listItem {
+          .cardContainer {
+            .icon {
+              & > :first-child {
+                height: 20px;
+              }
+            }
+            .value {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
 }

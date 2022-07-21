@@ -1,4 +1,5 @@
 @import "../../styles/design.theme.var.scss";
+@import "../../../src/globalMedia.scss";
 .outerWrapper {
   @include flexStyle(column);
   align-items: center;
@@ -22,7 +23,6 @@
       width: max-content;
       @include flexStyle(row);
       .menuOpt {
-        padding-top: 6px;
         @include flexStyle(row);
         & > :first-child {
           @include flexStyle(row);
@@ -36,8 +36,10 @@
               & > :first-child {
                 color: $tertiary-text-color-black;
               }
-              & > :first-child:hover {
+              & > :first-child:hover,
+              :focus {
                 color: $text-color-hover;
+                background-color: white;
               }
             }
           }
@@ -63,6 +65,43 @@
           }
         }
       }
+    }
+  }
+}
+
+@include for-phone-only {
+  .outerWrapper {
+    .innerWrapper {
+      width: 100%;
+    }
+  }
+}
+@include for-ipadPro-portrait {
+  .outerWrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
+  }
+}
+@include for-ipadPro-landscape {
+  .outerWrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
+  }
+}
+
+@include for-ipad-portrait {
+  .outerWrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+    }
+  }
+}
+@include for-ipad-landscape {
+  .outerWrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
     }
   }
 }

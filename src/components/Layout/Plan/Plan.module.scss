@@ -1,4 +1,5 @@
 @import "../../../styles/design.theme.var.scss";
+@import "../../../globalMedia.scss";
 .outerWrapper {
   background-color: $background-color-light-grey;
   height: 600px;
@@ -28,6 +29,19 @@
       column-gap: 24px;
       .cardContainer {
         width: 310px;
+      }
+    }
+  }
+}
+@include for-ipad-portrait {
+  .outerWrapper {
+    .innerWrapper {
+      .cardWrapper {
+        width: auto;
+        justify-content: space-around;
+        .cardContainer {
+          width: 216px;
+        }
       }
     }
   }
