@@ -49,6 +49,10 @@
         padding-right: 16px;
         padding-top: 4px;
         cursor: pointer;
+        & > :first-child:hover,
+        :focus {
+          transform: scale(1.5);
+        }
       }
       .btnWrapper {
         padding-left: 26px;

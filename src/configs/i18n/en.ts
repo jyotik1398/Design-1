@@ -16,6 +16,7 @@ export const MainPage = {
   amazingService: "Amazing Services",
   desc: "We're a creative agency ask us about distinctive branding",
   cards: {
+    btn: "Read more -->",
     card1: {
       workFlow: "Workflow automation",
       desc1:
@@ -126,14 +127,14 @@ export const Footer = {
   media: "Social Media",
   placeholder: "your-email",
   updates: "Get latest updates and offers",
-  post1:{
+  post1: {
     title: "On the head with free internet",
     date: "June 22, 2022",
   },
-  post2:{
+  post2: {
     title: "Turpisdolars",
     date: "June 22, 2022",
-  }
+  },
 };
 export const TextMappingTranslator = {
   header: Header,
