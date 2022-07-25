@@ -1,4 +1,5 @@
 @import "../../../styles/design.theme.var.scss";
+@import "../../../globalMedia.scss";
 .outerWrapper {
   background-color: $primary-background-color;
   padding-bottom: 32px;
@@ -39,6 +40,28 @@
         width: 220px;
         border: 2px solid $border-color;
         border-radius: 20px;
+      }
+    }
+  }
+}
+@include for-phone-only {
+  .outerWrapper {
+    .innerWrapper {
+      .header {
+        line-height: 40px;
+      }
+      .news {
+        .expt {
+          line-height: 40px;
+        }
+      }
+      .cardContainer {
+        @include flexStyle(column);
+        grid-row-gap: 24px;
+        .cardWrapper {
+          width: 100%;
+          padding-bottom: 24px;
+        }
       }
     }
   }

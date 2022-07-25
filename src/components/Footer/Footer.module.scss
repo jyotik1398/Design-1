@@ -199,6 +199,28 @@
     }
   }
 }
+@include for-phone-only {
+  .wrapper {
+    .innerWrapper {
+      width: calc(100% - 32px);
+      .header {
+        width: 100%;
+        .headerText {
+          font-size: 20px;
+        }
+      }
+      .body {
+        padding-bottom: 24px;
+        @include flexStyle(column);
+        align-items: center;
+        grid-row-gap: 24px;
+        .contact {
+          align-items: center;
+        }
+      }
+    }
+  }
+}
 @include for-ipad-landscape {
   .wrapper {
     padding-bottom: 12px;

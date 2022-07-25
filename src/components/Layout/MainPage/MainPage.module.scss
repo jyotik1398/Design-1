@@ -176,6 +176,74 @@
     }
   }
 }
+@include for-phone-only {
+  .wrapper {
+    padding-bottom: 24px;
+    .block1 {
+      @include flexStyle(column);
+      .text {
+        width: auto;
+      }
+      .imgSection {
+        margin-left: 0;
+        width: auto;
+      }
+    }
+    .block2 {
+      .desc1 {
+        width: auto;
+      }
+      .cardsWrapper {
+        @include flexStyle(column);
+        align-items: center;
+      }
+    }
+    .block3 {
+      @include flexStyle(column);
+      .companyData {
+        width: 100%;
+        .subHeading2 {
+          width: auto;
+        }
+        .comDesc {
+          width: auto;
+        }
+      }
+      .imageSec {
+        .img1 {
+          & > :first-child {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .block4 {
+      @include flexStyle(column);
+      .img2 {
+        width: 100%;
+        .imgClass {
+          & > :first-child {
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+        .counter {
+          right: 0px;
+        }
+      }
+      .data {
+        .headingBussiness {
+          width: auto;
+        }
+        .bussinessDesc {
+          width: auto;
+        }
+      }
+    }
+  }
+}
 @include for-ipad-landscape {
   .wrapper {
     .block3 {

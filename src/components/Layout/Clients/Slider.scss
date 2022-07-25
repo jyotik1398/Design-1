@@ -46,6 +46,26 @@
   transition-duration: 1s;
   transform: scale(1.08);
 }
+@include for-phone-only {
+  .slider {
+    height: auto;
+  }
+  .left-arrow {
+    left: 0;
+  }
+  .right-arrow {
+    right: 0;
+  }
+  .slide.active {
+    width: calc(100% - 32px);
+    padding: 24px 52px;
+    & > :first-child {
+      width: 100%;
+      padding-top: 24px;
+      height: auto;
+    }
+  }
+}
 @include for-ipad-portrait {
   .slider {
     height: 62vh;

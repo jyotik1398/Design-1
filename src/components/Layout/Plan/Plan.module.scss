@@ -33,6 +33,22 @@
     }
   }
 }
+@include for-phone-only {
+  .outerWrapper {
+    height: auto;
+    padding-top: 24px;
+    .innerWrapper {
+      .cardWrapper {
+        flex-direction: column;
+        width: auto;
+        padding-top: 50px;
+        .cardContainer {
+          padding-bottom: 24px;
+        }
+      }
+    }
+  }
+}
 @include for-ipad-portrait {
   .outerWrapper {
     .innerWrapper {

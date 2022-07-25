@@ -27,25 +27,27 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-          <div className={styles.img}>
-            <Icon icon="akar-icons:search" />
-          </div>
-          <div className={styles.btnWrapper}>
-            <Button
-              variant="contained"
-              color="primary"
-              type="submit"
-              value="Submit"
-              className={styles.getStartedButton}
-              disableElevation={true}
-              disableFocusRipple={true}
-              disableRipple={true}
-              disableTouchRipple={true}
-            >
-              <span className={styles.buttonText}>
-                {t(header?.getStartedBtn)}
-              </span>
-            </Button>
+          <div className={styles.search}>
+            <div className={styles.img}>
+              <Icon icon="akar-icons:search" />
+            </div>
+            <div className={styles.btnWrapper}>
+              <Button
+                variant="contained"
+                color="primary"
+                type="submit"
+                value="Submit"
+                className={styles.getStartedButton}
+                disableElevation={true}
+                disableFocusRipple={true}
+                disableRipple={true}
+                disableTouchRipple={true}
+              >
+                <span className={styles.buttonText}>
+                  {t(header?.getStartedBtn)}
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

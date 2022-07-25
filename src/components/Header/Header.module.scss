@@ -45,23 +45,27 @@
           }
         }
       }
-      .img {
-        align-self: center;
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-top: 4px;
-        cursor: pointer;
-        & > :first-child:hover,
-        :focus {
-          transform: scale(1.5);
+      .search {
+        display: flex;
+        flex-direction: row;
+        .img {
+          align-self: center;
+          padding-left: 16px;
+          padding-right: 16px;
+          padding-top: 4px;
+          cursor: pointer;
+          & > :first-child:hover,
+          :focus {
+            transform: scale(1.5);
+          }
         }
-      }
-      .btnWrapper {
-        padding-left: 26px;
-        align-self: center;
-        .getStartedButton {
-          .buttonText {
-            @include buttonTextStyle();
+        .btnWrapper {
+          padding-left: 26px;
+          align-self: center;
+          .getStartedButton {
+            .buttonText {
+              @include buttonTextStyle();
+            }
           }
         }
       }
@@ -71,8 +75,23 @@
 
 @include for-phone-only {
   .outerWrapper {
+    height: 100px;
     .innerWrapper {
-      width: 100%;
+      width: calc(100% - 32px);
+      height: 100px;
+      .menu {
+        flex-direction: column;
+        .menuOpt {
+          & > :first-child {
+            & > :first-child {
+              padding: 0;
+            }
+          }
+        }
+        .search {
+          align-self: flex-end;
+        }
+      }
     }
   }
 }
